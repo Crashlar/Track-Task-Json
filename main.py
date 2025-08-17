@@ -1,4 +1,4 @@
-from files import add
+from files import add , update
 # main.py
 class Task:
 
@@ -31,7 +31,12 @@ i. Select any other key to exit
         
         # update a task
         elif play == 2:
-            pass
+            try:
+                task_id = int(input("Enter task ID to update: "))
+                new_desc = input("Enter new description: ")
+                update.update_task(task_id, new_desc)
+            except ValueError:
+                print("Invalid task ID.")
 
         # delete a task
         elif play == 3:
