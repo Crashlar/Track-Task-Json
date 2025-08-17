@@ -1,4 +1,4 @@
-from files import add , update , delete , listall
+from files import add , update , delete , listall , notdone
 # main.py
 class Task:
 
@@ -22,6 +22,7 @@ i. Select any other key to exit
                         """))
         except ValueError:
             print("Invalid input. Please enter a number.")
+            return True
         
         # add a task 
         if play == 1:
@@ -53,7 +54,7 @@ i. Select any other key to exit
 
         # list all tasks that are not done
         elif play == 5:
-            pass
+            notdone.list_not_done()
         
         # list all tasks that are in progress
         elif play == 6:
