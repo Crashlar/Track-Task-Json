@@ -1,4 +1,4 @@
-from files import add , update , delete
+from files import add , update , delete , listall
 # main.py
 class Task:
 
@@ -49,7 +49,7 @@ i. Select any other key to exit
 
         # view all tasks
         elif play == 4:
-            pass
+            listall.list_tasks()
 
         # list all tasks that are not done
         elif play == 5:
