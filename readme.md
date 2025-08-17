@@ -27,7 +27,7 @@ cd Track-Task-Json
 
 ```json
 {
-  "id": id_name,
+  "id": 1,
   "description": "A short description",
   "status": "todo",
   "createdAt": "current saving/created time ",
@@ -64,7 +64,7 @@ task-cli/
 
 ##### try roadmap
 ````
-https://roadmap.sh/projects/number-guessing-game
+https://roadmap.sh/projects/task-tracker
 ````
 
 <p align="center">
