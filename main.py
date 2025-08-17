@@ -1,4 +1,4 @@
-from files import add , update , delete , listall , notdone
+from files import add , update , delete , listall , notdone , mediator 
 # main.py
 class Task:
 
@@ -58,21 +58,30 @@ i. Select any other key to exit
         
         # list all tasks that are in progress
         elif play == 6:
-            pass
+            listall.list_by_status("in-progress")
 
         # mark a task as done or in progress
         elif play == 7:
-            pass
+            try:
+                task_id = int(input("Enter task ID to mark as done: "))
+                mediator.mark_status(task_id, "done")
+            except ValueError:
+                print("Invalid task ID.")
 
 
         # mark a task as in progress
         elif play == 8:
-            pass
+            try:
+                task_id = int(input("Enter task ID to mark as in progress: "))
+                mediator.mark_status(task_id, "in-progress")
+            except ValueError:
+                print("Invalid task ID.")
 
 
         # exit the task manager
         else:
             print("Exiting the task manager.")
+            return False
 
 
 
