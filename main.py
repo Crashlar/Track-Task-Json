@@ -1,8 +1,11 @@
+from files import add
 # main.py
 class Task:
 
     def __init__(self):
-        self.menu()
+        while True:
+            if not self.menu():
+                break
 
     def menu(self):
         try:
@@ -22,7 +25,8 @@ i. Select any other key to exit
         
         # add a task 
         if play == 1:
-            pass
+            desc = input("Enter task description: ")
+            add.add_task(desc)
 
         
         # update a task
